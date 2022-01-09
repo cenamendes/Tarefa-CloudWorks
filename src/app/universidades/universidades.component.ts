@@ -31,9 +31,9 @@ export class UniversidadesComponent implements OnInit {
     this.service.getData()
     .subscribe(res=>{
         this.UniversidadeList=res;
-        console.log(this.UniversidadeList);
+        //console.log(this.UniversidadeList);
         const result = Array.from(this.UniversidadeList.reduce((m: { set: (arg0: any, arg1: any) => any; }, t: { country: any; }) => m.set(t.country, t), new Map()).values());              
-        console.log(result);
+        //console.log(result);
         this.UniversidadeList = result;
         this.UniversidadeList.sort((a: { country: string; }, b: { country: any; }) => a.country.localeCompare(b.country))
       })
@@ -43,7 +43,8 @@ export class UniversidadesComponent implements OnInit {
      this.service.Universidades(default_country)
     .subscribe(res=>{
       this.UniversidadeSingle=res;
-      console.log(this.UniversidadeSingle);
+      this.UniversidadeSingle.sort((a: { name: string; }, b: { name: any; }) => a.name.localeCompare(b.name))
+      //console.log(this.UniversidadeSingle);
     })
   }
 
@@ -51,7 +52,7 @@ export class UniversidadesComponent implements OnInit {
     this.service.Universidades(country)
     .subscribe(res=>{
       this.UniversidadeSingle=res;
-      console.log(this.UniversidadeSingle);
+      this.UniversidadeSingle.sort((a: { name: string; }, b: { name: any; }) => a.name.localeCompare(b.name))
       if(this.UniversidadeSingle == "")
       {
         alert("Selecione um País")
@@ -64,8 +65,8 @@ export class UniversidadesComponent implements OnInit {
     this.service.UniversidadesDetalhes(name)
     .subscribe(res=>{
       this.UniversidadeDetalhe=res;
-      console.log(name);
-      console.log(this.UniversidadeDetalhe);
+     // console.log(name);
+      //console.log(this.UniversidadeDetalhe);
     })
   }
 

@@ -3,7 +3,7 @@
 }
 
 .titulo{
-   background-color: brown;
+   background-image: linear-gradient(to right, red , brown);
 }
 
 .background{
