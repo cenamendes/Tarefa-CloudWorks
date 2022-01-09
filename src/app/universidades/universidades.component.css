@@ -6,11 +6,17 @@
    background-image: linear-gradient(to right, red , brown);
 }
 
-.background{
+.background_body{
    background-color:rgba(224, 144, 119, 0.342);
    min-height: 100vh;
    max-height: max-content;
   
+}
+
+.footer{
+   background-image: linear-gradient(to right, red , brown);
+   text-align: center;
+   color: white;
 }
 
 .alinhar_content{
@@ -18,6 +24,7 @@
    margin-left: auto;
    margin-right: auto;
    width: 90%;
+   margin-bottom: 0px;
 }
 
 .alinhar_component {
