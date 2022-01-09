@@ -1,0 +1,144 @@
+<div class="titulo">
+    <h1>Universidades do Mundo</h1>
+</div>
+
+<div class="background">
+
+    <div class="space"></div>
+
+    <div class="alinhar_component">
+        <button name="search" type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#Modal_pesquisa">
+            <i class="fa fa-search"><span class="text_color"> Pesquisar Universidades</span></i>
+        </button>
+    </div>
+
+    <div class="space"></div>
+
+
+    <table class="table table-striped alinhar_content">
+        <thead class="thead_color">
+            <tr>
+                <th>Universidades</th>
+                <th>Detalhes</th>
+            </tr>
+        </thead>
+        <tbody class="tbody_color">
+            <tr *ngFor="let row of UniversidadeSingle">
+                <td>{{row.name}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary mx-1"  data-bs-toggle="modal" data-bs-target="#Modal_info" (click) ="GetUniversidadesDetalhes(row.name)" >
+                    <i class="fa fa-info-circle"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+
+<!--MODAL´S-->
+
+<!--Modal das pesquisas-->
+
+<div class="modal fade" id="Modal_pesquisa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header titulo">
+          <h5 class="modal-title" id="exampleModalLabel">Pesquisar Universidades</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <div class="form-group row">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="align_component">
+                                <h4>Selecione o País</h4>
+                                <div class="dropdown_pesquisa">
+                                    <select name="Universidades" class="btn btn-secondary dropdown-toggle" [(ngModel)]="country">
+                                        <option>--Selecione o País--</option>
+                                        <option *ngFor="let uni of UniversidadeList">
+                                            <span>{{uni.country}}</span>
+                                        </option>
+                                    </select>
+                                    <button name="search" type="button" (click) ="GetUniversidades(country)" class="btn btn-success mx-1" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    
+                       
+                    
+                        <div class="col-md-6 alinhar_botao_pesquisa">
+                    
+                            <div class="form-group">
+                                <h4>Nome da Universidade</h4>
+                                
+                                    <input type="text" class="form-control" placeholder="Coloque o nome da Universidade"  [(ngModel)]="name_pesquisa">
+                                    <div class="space"></div>
+                                    <button name="search" type="button" class="btn btn-success mx-1 alinhar_botao_pesquisa_imagem" (click)="GetUniversidadePesquisa(name_pesquisa)" data-bs-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-search"> Pesquisar</i>
+                                    </button>
+                            </div>
+                        </div>
+                    </div> 
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--END SECTION-->
+
+
+
+
+
+<!-- Modal Detalhes -->
+
+<div class="modal fade" id="Modal_info" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header titulo">
+          <h5 class="modal-title">Informação da Universidade</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+            <div class="form-group row">
+                <div class="modal-body">
+                    
+                    <table class="table table-striped table_size">
+                        <thead class="thead_color">
+                            <tr>
+                                <th>Nome da Universidade</th>
+                                <th>Sigla</th>
+                                <th>País</th>
+                                <th>Página Web</th>
+                                <th>Domínios</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor ="let data of UniversidadeDetalhe">
+                                <td>{{data.name}}</td>
+                                <td>{{data.alpha_two_code}}</td>
+                                <td>{{data.country}}</td>
+                                <td>{{data.web_pages}}</td>
+                                <td>{{data.domains}}</td> 
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--END SECTION-->
+
+<!--END MODAL´S-->
+
+

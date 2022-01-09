@@ -1,0 +1,79 @@
+.space{
+ padding: 10px;
+}
+
+.titulo{
+   background-color: brown;
+}
+
+.background{
+   background-color:rgba(224, 144, 119, 0.342);
+   min-height: 100vh;
+   max-height: max-content;
+  
+}
+
+.alinhar_content{
+   
+   margin-left: auto;
+   margin-right: auto;
+   width: 90%;
+}
+
+.alinhar_component {
+   padding-left: 4.75%;
+     
+}
+
+.thead_color{
+   background-color:lightgray;
+}
+
+.tbody_color{
+   background: white;
+}
+
+.text_color{
+   font-size: 1em !important;
+   font-weight:bold;
+}
+
+h1{
+   color: white;
+   text-align: center;
+}
+
+h3{
+   text-align: center;
+}
+
+h4{
+   text-align: center;
+}
+
+h5{
+   color: white;
+}
+
+.modal-dialog {
+   width: auto;
+   max-width: 960px;
+ }
+
+ .modal-body {
+   overflow-y:auto;
+ }
+ 
+
+ .dropdown_pesquisa{
+    text-align: center;
+ }
+
+ .alinhar_botao_pesquisa_imagem{
+    width: 40%;
+ }
+
+ .alinhar_botao_pesquisa{
+    text-align: center;
+ }
+ 
