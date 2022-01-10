@@ -52,7 +52,7 @@
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="align_component">
+                            <div>
                                 <h4>Selecione o País</h4>
                                 <div class="dropdown_pesquisa">
                                     <select name="Universidades" class="btn btn-secondary dropdown-toggle" [(ngModel)]="country">
@@ -75,7 +75,7 @@
                             <div class="form-group">
                                 <h4>Nome da Universidade</h4>
                                 
-                                    <input type="text" class="form-control" placeholder="Coloque o nome da Universidade"  [(ngModel)]="name_pesquisa">
+                                    <input type="text" class="form-control alinhar_input" placeholder="Coloque o nome da Universidade"  [(ngModel)]="name_pesquisa">
                                     <div class="space"></div>
                                     <button name="search" type="button" class="btn btn-success mx-1 alinhar_botao_pesquisa_imagem" (click)="GetUniversidadePesquisa(name_pesquisa)" data-bs-dismiss="modal" aria-label="Close">
                                         <i class="fa fa-search"> Pesquisar</i>

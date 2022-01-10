@@ -74,9 +74,14 @@ h5{
 
  .alinhar_botao_pesquisa_imagem{
     width: 40%;
+    margin-right: 50px !important;
  }
 
  .alinhar_texto{
    text-align: center;
+ }
+
+ .alinhar_input{
+    width:90%;
  }
  
