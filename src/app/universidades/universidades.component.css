@@ -50,11 +50,7 @@ h1{
    text-align: center;
 }
 
-h3{
-   text-align: center;
-}
-
-h4{
+h3,h4{
    text-align: center;
 }
 
@@ -82,5 +78,9 @@ h5{
 
  .alinhar_botao_pesquisa{
     text-align: center;
+ }
+
+ .alinhar_texto{
+   text-align: center;
  }
  
