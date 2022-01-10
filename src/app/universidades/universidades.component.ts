@@ -1,18 +1,23 @@
-import { Component, Input, OnInit, Pipe } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SharedService } from '../API/shared.service';
+
 
 @Component({
   selector: 'app-universidades',
   templateUrl: './universidades.component.html',
   styleUrls: ['./universidades.component.css']
 })
+
 export class UniversidadesComponent implements OnInit {
-
+  
   constructor(private service:SharedService) { }
-
+ 
+  
   UniversidadeList!: any;
   UniversidadeSingle!: any;
   UniversidadeDetalhe!: any;
+
+  
 
   @Input()
   country!: string; 
@@ -24,7 +29,8 @@ export class UniversidadesComponent implements OnInit {
   ngOnInit(): void {
     this.default_country = "Portugal";
     this.GetPaises();
-    this.GetDefaultList(this.default_country);
+    this.GetDefaultList(this.default_country);  
+
   }
 
   GetPaises(){
@@ -82,6 +88,8 @@ export class UniversidadesComponent implements OnInit {
     })
   }
 
+
+  
   
 
 }
